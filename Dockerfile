@@ -48,7 +48,7 @@
 FROM python:3.9-slim AS builder
 
 # Archivy version
-ARG VERSION
+ARG VERSION=1.0.0
 
 # Installing pinned version of Archivy using pip
 RUN pip3.9 install --prefix=/install archivy==$VERSION
@@ -64,7 +64,7 @@ ARG BUILD_DATE
 ARG VCS_REF
 
 # Archivy version
-ARG VERSION
+ARG VERSION=1.0.0
 
 # Installing xdg-utils and pandoc
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
