@@ -97,6 +97,10 @@ VOLUME /archivy/data
 # Exposing port 5000
 EXPOSE 5000
 
+# These are intended for a distributed environment where all services aren't necessarily on localhost
+ENV ELASTICSEARCH_URL=http://elasticsearch:9200/
+ENV HOST=0.0.0.0
+
 # System call signal that will be sent to the container to exit
 STOPSIGNAL SIGTERM
 
